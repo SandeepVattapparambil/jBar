@@ -1,0 +1,26 @@
+{
+  "name": "jbar",
+  "version": "1.0.0",
+  "description": "A simple, but powerful lightweight JavaScript progress-bar/preloader library!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SandeepVattapparambil/jBar.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Progress",
+    "Bar",
+    "UI",
+    "Preloader"
+  ],
+  "author": "Sandeep Vattapparambil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SandeepVattapparambil/jBar/issues"
+  },
+  "homepage": "https://github.com/SandeepVattapparambil/jBar#readme"
+}
