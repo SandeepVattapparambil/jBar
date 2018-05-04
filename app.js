@@ -3,7 +3,7 @@
  * written by : Sandeep Vattapparambil
  */
 ;
-(function (root, factory) {
+((root, factory) => {
     if (typeof define === 'function' && define.amd) {
         define(factory);
     } else if (typeof exports === 'object') {
@@ -11,7 +11,7 @@
     } else {
         root.jBar = factory();
     }
-})(this, function () {
+})(this, () => {
     var jBar = {};
     jBar.version = '1.0.0';
     var Settings = jBar.settings = {
@@ -19,7 +19,7 @@
         template: '<div class="bar"></div>'
     };
 
-    jBar.configure = function (options) {
+    jBar.init = (options) => {
         var key, value;
         for (key in options) {
             value = options[key];
