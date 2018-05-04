@@ -18,5 +18,16 @@
         parent: 'body',
         template: '<div class="bar"></div>'
     };
+
+    jBar.configure = function (options) {
+        var key, value;
+        for (key in options) {
+            value = options[key];
+            if (value !== undefined && options.hasOwnProperty(key)) Settings[key] = value;
+        }
+        return this;
+    };
+
+    jBar.status = null;
     return jBar;
 });
