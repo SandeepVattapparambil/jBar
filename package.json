@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/SandeepVattapparambil/jBar/issues"
   },
-  "homepage": "https://github.com/SandeepVattapparambil/jBar#readme"
+  "homepage": "https://github.com/SandeepVattapparambil/jBar#readme",
+  "dependencies": {
+    "npm": "^6.0.0"
+  }
 }
