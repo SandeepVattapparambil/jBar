@@ -30,7 +30,10 @@
     <script src="app.js"></script>
 
     <script>
-        var jbar = jBar.init();
+        var jbar = jBar.init({
+            parent: '.parent',
+            height: '5px'
+        });
         //console.log(jBar);
         setTimeout(function () {
             jBar.set(100)

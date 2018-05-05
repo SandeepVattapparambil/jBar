@@ -21,10 +21,13 @@
     };
 
     jBar.init = (options) => {
-        var key, value;
-        for (key in options) {
-            value = options[key];
-            if (value !== undefined && options.hasOwnProperty(key)) Settings[key] = value;
+        // var key, value;
+        // for (key in options) {
+        //     value = options[key];
+        //     if (value !== undefined && options.hasOwnProperty(key)) Settings[key] = value;
+        // }
+        Settings = { ...Settings,
+            ...options
         }
         return this;
     };
@@ -33,11 +36,10 @@
 
     jBar.set = (maxWidth) => {
         var elem = document.createElement('div');
-        elem.setAttribute('style','width: 0; height: '+Settings.height+'; background-color:'+Settings.color);
+        elem.setAttribute('style', 'width: 0; height: ' + Settings.height + '; background-color:' + Settings.color);
         document.querySelector(Settings.parent).append(elem);
         var width = 0;
         var id = setInterval(frame, 20);
-
         function frame() {
             if (width >= maxWidth) {
                 clearInterval(id);
@@ -48,6 +50,5 @@
             }
         }
     }
-
     return jBar;
 });
