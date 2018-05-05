@@ -22,18 +22,43 @@
             right: 0;
             margin: auto;
         }
+
+        .bar {
+            width: 0;
+            height: 10px;
+            background-color: #ccc;
+        }
+
+        /* .bar:hover {
+            width: 100%;
+            height: 10px;
+            background-color: #AD310B;
+            -webkit-transition: background-color 1000ms linear;
+            -ms-transition: background-color 1000ms linear;
+            transition: background-color 1000ms linear;
+            animation-direction: alternate;
+        } */
+        .animate{
+            -webkit-transition: background-color 4s linear;
+            -ms-transition: background-color 4s linear;
+            transition: background-color 4s linear;
+            animation-direction: alternate;
+        }
     </style>
 
-    <div class="parent"></div>
+    <div class="bar"></div>
+    <div class="parent">
+    </div>
+
 
     <script src="app.js"></script>
 
     <script>
-        
         var jbar = jBar.init({
-            parent: 'div'
+            parent: '.bar'
         });
         console.log(jBar);
+        setTimeout(function(){jBar.set()}, 3000);
     </script>
 </body>
 

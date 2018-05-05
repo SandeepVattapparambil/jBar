@@ -29,5 +29,21 @@
     };
 
     jBar.status = null;
+
+    jBar.set = () => {
+        var elem = document.querySelector(Settings.parent);
+        var width = 0;
+        var id = setInterval(frame, 20);
+        function frame() {
+            if (width >= 50) {
+                clearInterval(id);
+                elem.style.display= 'none';
+            } else {
+                width++;
+                elem.style.width = width + '%';
+            }
+        }
+    }
+
     return jBar;
 });
