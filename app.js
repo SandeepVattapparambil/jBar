@@ -16,7 +16,8 @@
     jBar.version = '1.0.0';
     var Settings = jBar.settings = {
         parent: 'body',
-        template: '<div class="bar"></div>'
+        height: '2px',
+        color: '#cddc39'
     };
 
     jBar.init = (options) => {
@@ -32,8 +33,8 @@
 
     jBar.set = (maxWidth) => {
         var elem = document.createElement('div');
-        elem.setAttribute('style','width: 0; height: 5px; background-color: #cddc39');
-        document.querySelector(Settings.parent).appendChild(elem);
+        elem.setAttribute('style','width: 0; height: '+Settings.height+'; background-color:'+Settings.color);
+        document.querySelector(Settings.parent).append(elem);
         var width = 0;
         var id = setInterval(frame, 20);
 
