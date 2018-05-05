@@ -30,14 +30,17 @@
 
     jBar.status = null;
 
-    jBar.set = () => {
-        var elem = document.querySelector(Settings.parent);
+    jBar.set = (maxWidth) => {
+        var elem = document.createElement('div');
+        elem.setAttribute('style','width: 0; height: 5px; background-color: #cddc39');
+        document.querySelector(Settings.parent).appendChild(elem);
         var width = 0;
         var id = setInterval(frame, 20);
+
         function frame() {
-            if (width >= 50) {
+            if (width >= maxWidth) {
                 clearInterval(id);
-                elem.style.display= 'none';
+                elem.style.display = 'none';
             } else {
                 width++;
                 elem.style.width = width + '%';
